@@ -1106,7 +1106,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>AUTHORIZED_MILEAGE_RATE</td>
- <td class="data-type">integer</td>
+ <td class="data-type">numeric(4,1)</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -1393,6 +1393,26 @@ max-width: 500px;
  <td class="bool-field"></td>
  <td class="value"></td>
  <td><p class="max-td-wth"><em></em></p></td>
+ </tr>
+ <tr>
+ <td>BUDGET_OBJ_CODE_ID</td>
+ <td class="data-type">integer</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>Budget Object Code ID</em></p></td>
+ </tr>
+ <tr>
+ <td>BUDGET_OBJ_CODE_OTHER_EXPL</td>
+ <td class="data-type">text</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>Budget Object Code Other Explanation</em></p></td>
  </tr>
  <tr>
  <td colspan="8" class="nested-tab-parent">
@@ -2904,6 +2924,16 @@ max-width: 500px;
  <td><p class="max-td-wth"><em>Determines if Evaluation Schedule is editable</em></p></td>
  </tr>
  <tr>
+ <td>IS_PLAN_MANDATORY</td>
+ <td class="data-type">boolean</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>Added IS_PLAN_MANDATORY column to RES_28_10214_OBJECTIVE to identify if objective template is mandatory</em></p></td>
+ </tr>
+ <tr>
  <td colspan="8" class="nested-tab-parent">
  <table class="nested-tab">
  <tr>
@@ -3452,16 +3482,6 @@ max-width: 500px;
  <td class="bool-field"></td>
  <td class="value"></td>
  <td><p class="max-td-wth"><em>Privacy statement acknowledged</em></p></td>
- </tr>
- <tr>
- <td>case_form_id</td>
- <td class="data-type">integer</td>
- <td class="bool-field"></td>
- <td class="bool-field"></td>
- <td class="bool-field"></td>
- <td class="bool-field"></td>
- <td class="value"></td>
- <td><p class="max-td-wth"><em>Case form ID</em></p></td>
  </tr>
  <tr>
  <td colspan="8" class="nested-tab-parent">
@@ -5450,7 +5470,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>VOCATIONAL_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5480,7 +5500,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SCD_CONTRIBUTE_TO_VOC_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5500,7 +5520,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>OVERCOME_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5530,7 +5550,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SIGNIFICANT_VOCATIONAL_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5560,7 +5580,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SCD_CONTRIBUTE_TO_SIG_VOC_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5660,7 +5680,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>ADDITIONAL_NOTES</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -5730,7 +5750,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>OTHER_RESOURCES_PROVIDED</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -8321,6 +8341,16 @@ max-width: 500px;
  <td><p class="max-td-wth"><em>Station ID</em></p></td>
  </tr>
  <tr>
+ <td>ORIGINATING_SYSTEM_ID</td>
+ <td class="data-type">integer</td>
+ <td class="bool-field"></td>
+ <td class="bool-field">&#10003;</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>The original system where the application was created as a refence id</em></p></td>
+ </tr>
+ <tr>
  <td colspan="8" class="nested-tab-parent">
  <table class="nested-tab">
  <tr>
@@ -8346,6 +8376,14 @@ max-width: 500px;
  <td>FK_APPLICATION_R_DATA_FORM_TYPE_ID</td>
  <td class="value constr-type">FOREIGN KEY</td>
  <td>FORM_TYPE_ID</td>
+ <td><a href="#res_appian_busns_schema.RES_R_DATA">res_appian_busns_schema.RES_R_DATA</a></td>
+ <td class="value"></td>
+ <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
+ </tr>
+ <tr>
+ <td>RES_APPLICATION_ORIGINATING_SYSTEM_ID_fkey</td>
+ <td class="value constr-type">FOREIGN KEY</td>
+ <td>ORIGINATING_SYSTEM_ID</td>
  <td><a href="#res_appian_busns_schema.RES_R_DATA">res_appian_busns_schema.RES_R_DATA</a></td>
  <td class="value"></td>
  <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
@@ -8704,7 +8742,7 @@ max-width: 500px;
  <td>ICN</td>
  <td class="data-type">character varying(255)</td>
  <td class="bool-field"></td>
- <td class="bool-field">&#10003;</td>
+ <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="value"></td>
@@ -8869,14 +8907,6 @@ max-width: 500px;
  <td class="value constr-type">PRIMARY KEY</td>
  <td>VALIDATION_ID</td>
  <td></td>
- <td class="value"></td>
- <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
- </tr>
- <tr>
- <td>FK_APPLICATION_VALIDATION_PARTICIPANT_PROFILE_ICN</td>
- <td class="value constr-type">FOREIGN KEY</td>
- <td>ICN</td>
- <td><a href="#res_appian_busns_schema.RES_PARTICIPANT_PROFILE">res_appian_busns_schema.RES_PARTICIPANT_PROFILE</a></td>
  <td class="value"></td>
  <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
  </tr>
@@ -10519,7 +10549,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>VOCATIONAL_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10549,7 +10579,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SCD_CONTRIBUTE_TO_VOC_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10569,7 +10599,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>OVERCOME_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10599,7 +10629,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SIGNIFICANT_VOCATIONAL_IMPAIRMENT_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10629,7 +10659,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>SCD_CONTRIBUTE_TO_SIG_VOC_EXPL</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10669,7 +10699,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>OTHER_RESOURCES_PROVIDED</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -10739,7 +10769,7 @@ max-width: 500px;
  </tr>
  <tr>
  <td>ADDITIONAL_NOTES</td>
- <td class="data-type">character varying(255)</td>
+ <td class="data-type">text</td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
@@ -16735,7 +16765,7 @@ max-width: 500px;
  <td>ICN</td>
  <td class="data-type">character varying(255)</td>
  <td class="bool-field"></td>
- <td class="bool-field">&#10003;</td>
+ <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="bool-field"></td>
  <td class="value"></td>
@@ -16812,6 +16842,26 @@ max-width: 500px;
  <td><p class="max-td-wth"><em>This is the soft delete field for a case. Toggling this hides it the entire case from the front end users.</em></p></td>
  </tr>
  <tr>
+ <td>ORIGINATING_SYSTEM_ID</td>
+ <td class="data-type">integer</td>
+ <td class="bool-field"></td>
+ <td class="bool-field">&#10003;</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>The original system where the case was created as a refence id</em></p></td>
+ </tr>
+ <tr>
+ <td>CREATED_ON</td>
+ <td class="data-type">timestamp with time zone</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>Date the case was created - May be empty if case was created prior to data migration effort</em></p></td>
+ </tr>
+ <tr>
  <td colspan="8" class="nested-tab-parent">
  <table class="nested-tab">
  <tr>
@@ -16834,14 +16884,6 @@ max-width: 500px;
  <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
  </tr>
  <tr>
- <td>FK_CASE_PARTICIPANT_PROFILE_ICN</td>
- <td class="value constr-type">FOREIGN KEY</td>
- <td>ICN</td>
- <td><a href="#res_appian_busns_schema.RES_PARTICIPANT_PROFILE">res_appian_busns_schema.RES_PARTICIPANT_PROFILE</a></td>
- <td class="value"></td>
- <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
- </tr>
- <tr>
  <td>FK_CASE_R_DATA_STATUS_ID</td>
  <td class="value constr-type">FOREIGN KEY</td>
  <td>STATUS_ID</td>
@@ -16854,6 +16896,14 @@ max-width: 500px;
  <td class="value constr-type">FOREIGN KEY</td>
  <td>STATION_ID</td>
  <td><a href="#res_appian_busns_schema.RES_STATION">res_appian_busns_schema.RES_STATION</a></td>
+ <td class="value"></td>
+ <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
+ </tr>
+ <tr>
+ <td>RES_CASE_ORIGINATING_SYSTEM_ID_fkey</td>
+ <td class="value constr-type">FOREIGN KEY</td>
+ <td>ORIGINATING_SYSTEM_ID</td>
+ <td><a href="#res_appian_busns_schema.RES_R_DATA">res_appian_busns_schema.RES_R_DATA</a></td>
  <td class="value"></td>
  <td colspan="3" ><p class="max-td-wth"><em></em></p></td>
  </tr>
@@ -26438,6 +26488,16 @@ max-width: 500px;
  <td class="bool-field"></td>
  <td class="value"></td>
  <td><p class="max-td-wth"><em></em></p></td>
+ </tr>
+ <tr>
+ <td>ZIP_CODE</td>
+ <td class="data-type">character varying(5)</td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="bool-field"></td>
+ <td class="value"></td>
+ <td><p class="max-td-wth"><em>Column to Capture Zip code for fetching P911 Rates for No Prior SA Award Type</em></p></td>
  </tr>
  <tr>
  <td colspan="8" class="nested-tab-parent">
@@ -50244,7 +50304,7 @@ max-width: 500px;
 </div>
 
 <footer>
- Generated at <em> 2025-06-27T10:01:09 </em> by <strong>pgModeler 1.2.0-alpha </strong><br/>
+ Generated at <em> 2025-07-25T15:00:43 </em> by <strong>pgModeler 1.2.0-alpha </strong><br/>
 <a href="https://pgmodeler.io">PostgreSQL Database Modeler - https://pgmodeler.io</a><br/>
 Copyright © 2006 - 2025 Raphael Araújo e Silva 
 
